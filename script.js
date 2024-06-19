@@ -1,53 +1,38 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const links = document.querySelectorAll("#sidebar a");
-    const navbarHeight = document.querySelector(".navbar").offsetHeight;
-    let currentParagraphIndex = 0;
-    let targetElements = [];
+    const sidebarLinks = document.querySelectorAll("#sidebar a");
+    const sidebarHeader = document.querySelector("#sidebar .sidebar-header");
 
-    function highlightParagraph(index) {
-        // Remove highlight from all paragraphs
-        document.querySelectorAll("main p").forEach(p => p.classList.remove("highlighted"));
-
-        if (targetElements.length > 0 && index >= 0 && index < targetElements.length) {
-            const targetElement = targetElements[index];
-            const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY - navbarHeight;
-            window.scrollTo({
-                top: elementPosition,
-                behavior: "smooth"
-            });
-            targetElement.classList.add("highlighted");
-        }
-    }
-
-    links.forEach(link => {
-        link.addEventListener("click", function(e) {
-            e.preventDefault();
-
-            // Get the target class from the link href
-            const targetClass = link.getAttribute("href").substring(1);
-
-            // Get all elements with the target class
-            targetElements = document.querySelectorAll(`.${targetClass}`);
-            currentParagraphIndex = 0;
-
-            if (targetElements.length > 0) {
-                highlightParagraph(currentParagraphIndex);
-                document.getElementById("navigation-buttons").classList.remove("d-none");
-            }
+    sidebarLinks.forEach(link => {
+        link.addEventListener("click", function(event) {
+            event.preventDefault();
+            const targetClass = this.getAttribute("href").substring(1); // Remove the '#' from href
+            highlightAndScrollTo(targetClass);
         });
     });
 
-    document.getElementById("next-btn").addEventListener("click", function() {
-        if (currentParagraphIndex < targetElements.length - 1) {
-            currentParagraphIndex++;
-            highlightParagraph(currentParagraphIndex);
-        }
+    // Event listener for scrolling to top on sidebar header click
+    sidebarHeader.addEventListener("click", function(event) {
+        event.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
     });
 
-    document.getElementById("prev-btn").addEventListener("click", function() {
-        if (currentParagraphIndex > 0) {
-            currentParagraphIndex--;
-            highlightParagraph(currentParagraphIndex);
+    function highlightAndScrollTo(targetClass) {
+        // Remove highlight from all paragraphs
+        const allParagraphs = document.querySelectorAll("p");
+        allParagraphs.forEach(paragraph => {
+            paragraph.classList.remove("highlighted");
+        });
+
+        // Highlight the targeted paragraph
+        const targetParagraph = document.querySelector("." + targetClass);
+        if (targetParagraph) {
+            targetParagraph.classList.add("highlighted");
+
+            // Scroll to the targeted paragraph
+            targetParagraph.scrollIntoView({ behavior: "smooth", block: "start" });
         }
-    });
+    }
 });

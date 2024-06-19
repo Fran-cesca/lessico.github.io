@@ -1,24 +1,24 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #000000;
-    color: #ffffff;
+    background-color: #ffffff; /* Changed to white */
+    color: #000000; /* Changed to black */
     margin: 0;
     padding: 0;
 }
 
 .navbar {
-    background-color: #000000;
+    background-color: #CEE26B; 
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
 .navbar .navbar-brand,
 .navbar-dark .navbar-nav .nav-link {
-    color: #ffffff;
+    color: #000000; /* Changed to black */
 }
 
 .navbar-dark .navbar-nav .nav-link:hover {
-    color: #cccccc;
+    color: #333333; /* Slightly lighter black for hover */
 }
 
 .wrapper {
@@ -30,19 +30,21 @@ body {
 #sidebar {
     min-width: 250px;
     max-width: 250px;
-    background: #000000;
-    color: #ffffff;
+    background: #ffffff; /* Changed to white */
+    color: #000000; /* Changed to black */
     transition: all 0.3s;
     position: fixed;
     height: 100%;
     top: 0;
     left: 0;
     padding-top: 60px; /* Offset for the fixed navbar */
+    overflow-y: auto; /* Enable vertical scrollbar */
 }
 
 #sidebar .sidebar-header {
     padding: 20px;
-    background: #000000;
+    background: #ffffff; /* Changed to white */
+    cursor: pointer;
 }
 
 #sidebar ul.components {
@@ -52,25 +54,25 @@ body {
 }
 
 #sidebar ul li {
-    padding: 10px 20px;
+    padding: 7px 20px;
 }
 
 #sidebar ul li a {
-    padding: 10px;
-    font-size: 1.1em;
+    padding: 0px;
+    font-size: 1em;
     display: block;
-    color: #ffffff;
+    color: #000000; /* Changed to black */
     text-decoration: none;
 }
 
 #sidebar ul li a:hover {
-    color: #cccccc;
-    background: #212529;
+    color: #333333; /* Slightly lighter black for hover */
+    background: #f1f1f1; /* Light grey for hover background */
 }
 
 #content {
     width: 100%;
-    padding: 20px;
+    padding: 70px;
     margin-left: 250px;
 }
 
@@ -80,7 +82,8 @@ body {
 
 .highlighted {
     text-decoration: underline;
-    text-decoration-color: #ff0000; /* Underline color */
+    text-decoration-color: #58EFEC; /* Underline color */
+    text-decoration-thickness: 3px; /* Thickness of the underline */
 }
 
 .highlighted::before {
@@ -101,10 +104,24 @@ body {
 .btn-yellow {
     background-color: #ffc107;
     border-color: #ffc107;
-    color: #000;
+    color: #000000; /* Changed to black */
 }
 
 .btn-yellow:hover {
     background-color: #e0a800;
     border-color: #d39e00;
 }
+
+.square-border {
+    border: 2px solid black; /* Changed to black */
+    padding: 10px;
+    margin: 20px 0;
+    display: block;
+    color: black; /* Changed to black */
+}
+
+.lemma {
+    font-weight: bold;
+    font-size: 30px;
+}
+
