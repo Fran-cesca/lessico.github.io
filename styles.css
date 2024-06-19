@@ -1,0 +1,49 @@
+/* Reset default margin and padding for body */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Example font family */
+    color: #ffffff; /* White text color */
+    background-color: #000000; /* Black background color */
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Custom Navbar Styling */
+.navbar {
+    background-color: #000000; /* Black background color */
+    padding-top: 10px; /* Adjust top padding */
+    padding-bottom: 10px; /* Adjust bottom padding */
+}
+
+/* Custom Navbar Brand Color */
+.navbar .navbar-brand {
+    color: #ffffff; /* White text color */
+}
+
+/* Custom Navbar Links Color */
+.navbar-dark .navbar-nav .nav-link {
+    color: #ffffff; /* White text color */
+}
+
+/* Navbar Links Hover Color */
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #cccccc; /* Light gray hover color */
+}
+
+.navbar-nav {
+    margin-left: auto; /* Move navbar-nav to the right */
+    padding-right: 0px; /* Adjust right padding */
+}
+
+/* Main Content Styling */
+.main-content {
+    flex: 1; /* Take up remaining space */
+    text-align: center; /* Center text */
+    background-color: #000000; /* Ensure background is black */
+}
+
+.central-text h1, .central-text p {
+    color: #ffffff; /* White text color */
+}
