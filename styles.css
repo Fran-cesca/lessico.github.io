@@ -1,72 +1,45 @@
-body {
-    font-family: "PT Serif", serif;
-    line-height: 1.6;
-    padding-top: 56px; /* Adjust to ensure content is not hidden behind the navbar */
-}
-
-header {
-    margin-bottom: 30px;
-}
-
-
-h1, h2 {
-    margin-bottom: 20px;
-}
-
-p {
-    margin-bottom: 20px;
-}
-
-
-
 /* Reset default margin and padding for body */
 body {
     margin: 0;
     padding: 0;
-}
-
-/* Fullscreen background setup */
-.fullscreen-bg {
-    position: relative;
+    font-family: Arial, sans-serif; /* Example font family */
+    color: #ffffff; /* White text color */
+    background-color: #000000; /* Black background color */
     height: 100vh; /* Full viewport height */
-    background: url('wolfli.jpeg') no-repeat center center/cover;
-}
-
-.fullscreen-bg .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
     display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: center;
+    flex-direction: column;
 }
 
-.overlay h1 {
-    font-size: 3rem;
-}
-
-.overlay p {
-    font-size: 1.5rem;
-}
-
+/* Custom Navbar Styling */
 .navbar {
-    background-color: #000000; /* Black background */
+    background-color: #000000; /* Black background color */
+    padding-top: 10px; /* Adjust top padding */
+    padding-bottom: 10px; /* Adjust bottom padding */
 }
 
-.navbar-nav {
-    margin-left: auto; /* Move navbar-nav to the right */
-    padding-right: 0px; /* Adjust right padding */
+/* Custom Navbar Brand Color */
+.navbar .navbar-brand {
+    color: #ffffff; /* White text color */
 }
 
-.fullscreen-bg .overlay p {
-    font-size: 1.5rem; /* Example font size */
-    margin-left: 40px; /* Larger margin on the left */
-    margin-right: 40px; /* Larger margin on the right */
+/* Custom Navbar Links Color */
+.navbar-dark .navbar-nav .nav-link {
+    color: #ffffff; /* White text color */
+}
+
+/* Navbar Links Hover Color */
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #cccccc; /* Light gray hover color */
+}
+
+
+/* Main Content Styling */
+.main-content {
+    flex: 1; /* Take up remaining space */
     text-align: center; /* Center text */
-    max-width: 600px; /* Example maximum width */
+    background-color: #000000; /* Ensure background is black */
+}
+
+.central-text h1, .central-text p {
+    color: #ffffff; /* White text color */
 }
