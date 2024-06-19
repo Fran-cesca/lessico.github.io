@@ -1,0 +1,72 @@
+body {
+    font-family: "PT Serif", serif;
+    line-height: 1.6;
+    padding-top: 56px; /* Adjust to ensure content is not hidden behind the navbar */
+}
+
+header {
+    margin-bottom: 30px;
+}
+
+
+h1, h2 {
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+
+
+/* Reset default margin and padding for body */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Fullscreen background setup */
+.fullscreen-bg {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    background: url('wolfli.jpeg') no-repeat center center/cover;
+}
+
+.fullscreen-bg .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.overlay h1 {
+    font-size: 3rem;
+}
+
+.overlay p {
+    font-size: 1.5rem;
+}
+
+.navbar {
+    background-color: #000000; /* Black background */
+}
+
+.navbar-nav {
+    margin-left: auto; /* Move navbar-nav to the right */
+    padding-right: 0px; /* Adjust right padding */
+}
+
+.fullscreen-bg .overlay p {
+    font-size: 1.5rem; /* Example font size */
+    margin-left: 40px; /* Larger margin on the left */
+    margin-right: 40px; /* Larger margin on the right */
+    text-align: center; /* Center text */
+    max-width: 600px; /* Example maximum width */
+}

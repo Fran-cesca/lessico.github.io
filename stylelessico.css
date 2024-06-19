@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #000000;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.navbar .navbar-brand,
+.navbar-dark .navbar-nav .nav-link {
+    color: #ffffff;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #cccccc;
+}
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    background: #000000;
+    color: #ffffff;
+    transition: all 0.3s;
+    position: fixed;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding-top: 60px; /* Offset for the fixed navbar */
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    background: #000000;
+}
+
+#sidebar ul.components {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+#sidebar ul li {
+    padding: 10px 20px;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#sidebar ul li a:hover {
+    color: #cccccc;
+    background: #212529;
+}
+
+#content {
+    width: 100%;
+    padding: 20px;
+    margin-left: 250px;
+}
+
+.container {
+    margin-top: 80px; /* Offset for the fixed navbar */
+}
+
+.highlighted {
+    text-decoration: underline;
+    text-decoration-color: #ff0000; /* Underline color */
+}
+
+.highlighted::before {
+    content: '';
+    display: block;
+    height: 70px; /* Height of the fixed navbar */
+    margin-top: -70px; /* Negative value of the navbar height */
+    visibility: hidden;
+}
+
+#navigation-buttons {
+    position: fixed;
+    top: 70px; /* Adjusted to be below the navbar */
+    right: 10px;
+    z-index: 1050; /* Ensure it appears above other content */
+}
+
+.btn-yellow {
+    background-color: #ffc107;
+    border-color: #ffc107;
+    color: #000;
+}
+
+.btn-yellow:hover {
+    background-color: #e0a800;
+    border-color: #d39e00;
+}
