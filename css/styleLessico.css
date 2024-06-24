@@ -1,0 +1,332 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff; /* Text color */
+    background-color: #1A2E35; /* Background color */
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar {
+  position: fixed;
+  left: -250px;
+  top: 0;
+  height: 100%;
+  width: 250px;
+  background-color: #1cbbb4;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  box-sizing: border-box; 
+  overflow-y: auto;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 10px 15px;
+}
+
+.sidebar ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.sidebar ul li a:hover {
+  color: #EDE342;
+  text-decoration: none;
+}
+
+.opened {
+  left: 0;
+}
+
+
+.sidebar-menu li:first-child {
+            padding-top: 40px; 
+}
+
+
+#sidebar-content {
+            height: calc(100% - 60px); 
+            overflow-y: auto; 
+        }
+
+#sidebar-content::-webkit-scrollbar {
+            width: 2px; 
+        }
+
+#sidebar-content::-webkit-scrollbar-track {
+            background: #1cbbb4; 
+        }
+
+#sidebar-content::-webkit-scrollbar-thumb {
+            background-color: #EDE342; 
+            border-radius: 10px; 
+        }
+
+.img-container {
+  width: 120px;
+  padding:0;
+  margin: 0;
+  text-align: center; 
+}
+
+#logo {
+  width: 100%;
+  max-width: 100%; 
+  height: auto; 
+}
+
+ul#parole-list {
+    list-style: none; /* Remove default list styles */
+}
+
+ul#parole-list li {
+    line-height: 1.5; /* Adjust line height for readability */
+}
+
+.container-fluid {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.navbar-brand {
+    margin-right: 5%;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand img {
+    max-width: 100%;
+    height: auto;
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: #ffffff;
+}
+
+.navbar-nav .nav-item.active .nav-link {
+    color: #ffffff; /* Active link color */
+}
+
+.navbar-toggler {
+    border-color: #ffffff; /* Toggler color */
+}
+
+.user_option {
+    display: flex;
+    align-items: center;
+}
+
+.user_option a {
+    color: #ffffff;
+}
+
+.user_option a:hover {
+    color: #1cbbb4; /* Hover color */
+}
+
+.custom_menu-btn button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.custom_menu-btn button span {
+    display: block;
+    width: 34px;
+    height: 4px;
+    background-color: #ffffff;
+    margin: 7px 0;
+    transition: all 0.3s;
+    border-radius: 10px;
+}
+
+.main_section {
+    padding: 70px 0; 
+    text-align: center;
+}
+
+.main_section h1 {
+    color: #ffffff;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.main_section p {
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .main_section h1 {
+        font-size: 28px;
+    }
+}
+
+
+
+/*end header section*/
+
+
+/* end footer section*/
+#navbarSupportedContent {
+  -webkit-transform: translateX(100vw);
+          transform: translateX(100vw);
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#navbarSupportedContent.lg_nav-toggle {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
+}
+
+.custom_menu-btn button {
+  margin-top: 12px;
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
+.custom_menu-btn button span {
+  display: block;
+  width: 34px;
+  height: 4px;
+  background-color: #fff;
+  margin: 7px 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border-radius: 10px;
+}
+
+.custom_menu-btn .s-2 {
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+  width: 17px;
+  margin-left: auto;
+}
+
+.menu_btn-style button .s-1 {
+  -webkit-transform: rotate(45deg) translate(8px, 8px);
+          transform: rotate(45deg) translate(8px, 8px);
+}
+
+.menu_btn-style button .s-2 {
+  -webkit-transform: translateX(100px);
+          transform: translateX(100px);
+}
+
+.menu_btn-style button .s-3 {
+  -webkit-transform: rotate(-45deg) translate(8px, -8px);
+          transform: rotate(-45deg) translate(8px, -8px);
+}
+/*# sourceMappingURL=style.css.map */
+
+
+#definition-creatività{
+   width: 60%;
+   margin: 0 auto; /* Center the element horizontally */
+   text-align: justify;
+}
+
+#definition-creatività p:not(.lemma){
+  font-size: 15px;
+}
+
+
+.square-border {
+    border: 2px solid white;
+    padding: 8px 8px 0px 8px;
+    margin: 20px 0;
+    display: block;
+    color: white;
+    background-color: #1cbbb480;;
+}
+
+.lemma {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+#etimo{
+  font-weight: bold;
+  font-size: 18px;
+}
+
+#dominiButton {
+  position: fixed;
+  top: 100px ; 
+  right: 50px; 
+  cursor: pointer;
+  padding: 15px;
+  background-color: #ff4f5a;
+  color: #ffffff;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border: 1px solid transparent;
+  border-radius: 0;
+  text-align: center;
+  width: auto;
+  font-size: 15px;
+  margin: 5px;
+}
+
+#dominiButton:hover{
+  background-color: transparent;
+  border-color: #ff4f5a;
+  color: #ff4f5a;
+}
+
+#paroleButton {
+    position: fixed;
+    top: 100px; 
+    right: calc(120px + 15px + 15px); 
+    cursor: pointer;
+    padding: 15px;
+    background-color: #ff4f5a;
+    color: #ffffff;
+    transition: all 0.3s;
+    border: 1px solid transparent;
+    border-radius: 0;
+    text-align: center;
+    width: auto;
+    font-size: 15px;
+    margin: 5px;
+}
+
+#paroleButton:hover{
+  background-color: transparent;
+  border-color: #ff4f5a;
+  color: #ff4f5a;
+}
+
+.opened .main_section {
+    margin-left: 100px; /* Adjust margin when sidebar is opened */
+    width:100%;
+}
+
+.highlighted {
+    text-decoration: underline;
+    text-decoration-color: #1cbbb4; /* Underline color */
+    text-decoration-thickness: 2px; /* Thickness of the underline */
+}
+
+
+
