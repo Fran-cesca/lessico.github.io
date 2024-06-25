@@ -252,6 +252,9 @@ ul#parole-list li {
   font-size: 15px;
 }
 
+#parole-list li{
+  cursor: pointer;
+}
 
 .square-border {
     border: 2px solid white;
