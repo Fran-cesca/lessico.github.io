@@ -73,6 +73,7 @@ body {
   padding:0;
   margin: 0;
   text-align: center; 
+  position: fixed;
 }
 
 #logo {
@@ -190,6 +191,7 @@ ul#parole-list li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-left: 150px;
 }
 
 #navbarSupportedContent.lg_nav-toggle {
@@ -312,8 +314,6 @@ ul#parole-list li {
 }
 
 
-
-
 #paroleButton:hover{
   background-color: transparent;
   border-color: #ff4f5a;
@@ -331,5 +331,28 @@ ul#parole-list li {
     text-decoration-thickness: 2px; /* Thickness of the underline */
 }
 
+.hidden {
+  display: none;
+}
 
 
+.hidden {
+  display: none;
+}
+
+.scroll-to-top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: #ff4f5a;
+  color: #ffffff;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 24px;
+  z-index: 1000;
+}
